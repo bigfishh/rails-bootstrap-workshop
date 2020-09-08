@@ -1,0 +1,18 @@
+<h1><%= @drink.name %></h1>
+<strong>Added by:</strong> <em><%= @drink.user.name %></em> <br/>
+<%= image_tag(@drink.image_url) %> <br/>
+<%= @drink.description %>
+<p>
+    <strong>Ingredients: </strong>
+    <ul>
+    <% @drink.drink_ingredients.each do |drink_ingredient| %>
+        <li>
+            <%= drink_ingredient.ingredient.emoji %><%= drink_ingredient.measurement %> of <%= drink_ingredient.ingredient.name %>
+        </li>
+    <% end %>
+    </ul>
+</p>
+<p>
+    <%= link_to 'Edit', edit_drink_path(@drink) %>
+    <%= button_to "Delete", drink_path(@drink), method: :delete %>
+</p>

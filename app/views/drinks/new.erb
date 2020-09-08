@@ -1,0 +1,17 @@
+<h1>Make a drink</h1>
+
+<%= form_for @drink do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <br>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+    <%= f.submit %>
+<% end %>
