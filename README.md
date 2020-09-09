@@ -26,7 +26,8 @@ Typography
 ## What is Bootstrap?
 * Bootstrap is a CSS framework.
 * CSS frameworks are libraries with CSS code already written for you. It allows for easier web design. 
-* Most CSS frameworks comes with grid layouts, button/form design, and typography 
+* Most CSS frameworks comes with grid layouts, button/form design, and typography.
+* Since there are a number of different designs and styles that comes with this library, in this walk-through we'll only be covering the basics.
 
 ## Implementation
 * There's a number of different ways to implement Bootstrap into your application. 
@@ -46,13 +47,40 @@ Step 2:
 ```
 * After saving your files and refreshing your browser, you should already notice some changes in your website.This is because Bootstrap overwrites default browser styles. `browser style > bootstrap style > custom css`
 
-## Basics of Bootstrap
-* In this walk-through, we'll only be covering the following.
-### Typography
+### Basics of Bootstrap
 * Containers 
     * Adds padding to around your content. 
-    * Allows your application to be responsive. 
+    * As you increase or decrease the size of your browser, your container is responsive to the changes. It will increase/decrese with it.  
 ```html 
     <div class="container">Wrap your content in a div tag with the class of container</div>
 ```
+* Typography
+    * Header class: 
+        * You want your content to match the style of header tags in HTML but can't use a header tag
+        * Bootstrap provides you with `.h1 - .h6`
+        * `<div class="h1">Same as a regular h1 tag</div>`
+    * Display heading: 
+        * All display headings will be bigger than header tags. 
+        * `<h1 class="display-1">Will be bigger than a regular h1 tag</h1>`. 
+        * Goes from `display-1` to `display-4`, from biggest to smallest.
+    * Other fun font styles: 
+        * Mark tag: `<p><mark>This will be highlighted<mark> but this will not be since it's outside of the mark tag</p>`
+        * Delete tag: `<p><del>This will have a strike-through across it.</del></p>`
+        * Capitalization: 
+            * text-type_to_choose_from
+                * type to choose from:`lowercase`, `uppercase`, `capitalization`, and `monospace`
+            * ex: `<div class="text-lowercase">EVERYTHING HERE WILL BE LOWERCASED</div>`
+        * Text Modifiers: 
+            * text-decoration-none: gets rid of link underlines
+            * text-reset: gets rid of the color of something, ex: link, and makes it the same color as the parent container
+        * Horizontal alignment: 
+            * add this the to class of a tag.
+            * text-justify
+            * `text-break_point-position`
+                * breakpoint: when the browser reaches what is visible to the user. 
+                    * `sm`, `md`, `lg`, and `xl`
+                * position: `left`, `right`, `center`
+                * ex: `<div class="text-sm-center">When the viewport reaches sm, 576px, center the content within this div</div>`
+
+    
 
