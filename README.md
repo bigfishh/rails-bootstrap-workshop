@@ -28,10 +28,10 @@ Typography
 * CSS frameworks are libraries with CSS code already written for you. It allows for easier web design. 
 * Most CSS frameworks comes with grid layouts, button/form design, and typography 
 
-## Implementation: 
+## Implementation
 * There's a number of different ways to implement Bootstrap into your application. 
 * Here's what we're going to be doing in this walk-through: 
-    1. Copy and paste the `Step 1` into `app > views > layouts > application.html.erb`, inside of the `<head>` before the other stylesheets
+    1. Copy and paste the following CSS link, `Step 1`, into `app > views > layouts > application.html.erb`, inside of the `<head>` before the other stylesheets
     2. Copy and paste the following JavaScript script, `Step 2`, in to `app > views > layouts > application.html.erb`, place it at the end `<body>`
 
 ```html
@@ -44,5 +44,15 @@ Step 2:
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 ```
-* After saving your files and refreshing your browser, you should already notice some changes in your website.
+* After saving your files and refreshing your browser, you should already notice some changes in your website.This is because Bootstrap overwrites default browser styles. `browser style > bootstrap style > custom css`
+
+## Basics of Bootstrap
+* In this walk-through, we'll only be covering the following.
+### Typography
+* Containers 
+    * Adds padding to around your content. 
+    * Allows your application to be responsive. 
+```html 
+    <div class="container">Wrap your content in a div tag with the class of container</div>
+```
 
