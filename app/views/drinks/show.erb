@@ -1,18 +1,20 @@
-<div class="card my-3">
+<div class="card bg-white mb-3" style="height: 40rem;">
     <div class="card-body">
         <h1 class="card-title"><%= @drink.name %></h1>
         <p class="card-subtitle"> <strong>Added by:</strong> <em><%= @drink.user.name %></em></p>
-        <img class="card-img float-center img-fluid-sm" alt="..." src=<%= @drink.image_url %> >
-        <p class="blockquote"><%= @drink.description %></p>
+        <img style="height: 20rem; width: 25rem;" class="card-img mx-auto d-block mb-3" alt="..." src=<%= @drink.image_url %> >
+        <p class="card-description"><%= @drink.description %></p>
         <p class="card-text">
-            <strong>Ingredients: </strong>
-            <ul class="list-unstyled">
-            <% @drink.drink_ingredients.each do |drink_ingredient| %>
-                <li>
-                    <%= drink_ingredient.ingredient.emoji %> <%= drink_ingredient.measurement %> of <%= drink_ingredient.ingredient.name %>
-                </li>
+            <% if @drink.drink_ingredients.count > 0 %>
+                <strong>Ingredients: </strong>
+                <ul class="list-unstyled">
+                <% @drink.drink_ingredients.each do |drink_ingredient| %>
+                    <li>
+                        <%= drink_ingredient.ingredient.emoji %> <%= drink_ingredient.measurement %> of <%= drink_ingredient.ingredient.name %>
+                    </li>
+                <% end %>
+                </ul>
             <% end %>
-            </ul>
         </p>
         <p>
             <%= link_to 'Edit', edit_drink_path(@drink), :class => "btn-primary btn-sm" %>
