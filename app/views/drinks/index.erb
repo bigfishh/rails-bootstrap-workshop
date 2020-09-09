@@ -1,15 +1,15 @@
 <div class="row">
     <% @drinks.each do |drink| %>
-        <div class="col-sm">
-            <div class="card mb-xl-3" style="width: 18rem;">
-                <img src=<%= drink.image_url %> class="card-img-top" alt="...">
+        <section class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-4" style="width: 16rem; height: 25rem">
+                <img src=<%= drink.image_url %> style="height: 10rem;" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><%= drink.name %></h5>
                     <p class="card-subtitle sm"><em><%= drink.user.name %></em></p>
-                    <p class="card-text"><%= drink.description %></p>
-                    <%= link_to "view more", drink_path(drink), :class => "btn btn-primary btn-sm"%>
+                    <p class="card-text "><%= drink.description[0...90] %>...</p>
+                    <%= link_to "view more", drink_path(drink), :class => "btn btn-primary btn-sm text-content-bottom"%>
                 </div>
             </div>
-        </div>
+        </section>
     <% end %>
 </div>
