@@ -31,13 +31,15 @@ Typography
 ## Implementation: 
 * There's a number of different ways to implement Bootstrap into your application. 
 * Here's what we're going to be doing in this walk-through: 
-    1. Copy and paste the following into `app > views > layouts > application.html.erb`, inside of the `<head>` before the other stylesheets
-```html
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-```
-    2. Copy and paste the following JavaScript script in to `app > views > layouts > application.html.erb`, place it at the end `<body>`
+    1. Copy and paste the `Step 1` into `app > views > layouts > application.html.erb`, inside of the `<head>` before the other stylesheets
+    2. Copy and paste the following JavaScript script, `Step 2`, in to `app > views > layouts > application.html.erb`, place it at the end `<body>`
 
 ```html
+Step 1:
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+```
+```html
+Step 2:
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
