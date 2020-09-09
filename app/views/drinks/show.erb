@@ -1,18 +1,23 @@
-<h1><%= @drink.name %></h1>
-<strong>Added by:</strong> <em><%= @drink.user.name %></em> <br/>
-<%= image_tag(@drink.image_url) %> <br/>
-<%= @drink.description %>
-<p>
-    <strong>Ingredients: </strong>
-    <ul>
-    <% @drink.drink_ingredients.each do |drink_ingredient| %>
-        <li>
-            <%= drink_ingredient.ingredient.emoji %><%= drink_ingredient.measurement %> of <%= drink_ingredient.ingredient.name %>
-        </li>
-    <% end %>
-    </ul>
-</p>
-<p>
-    <%= link_to 'Edit', edit_drink_path(@drink) %>
-    <%= button_to "Delete", drink_path(@drink), method: :delete %>
-</p>
+<div class="card my-3">
+    <div class="card-body">
+        <h1 class="card-title"><%= @drink.name %></h1>
+        <p class="card-subtitle"> <strong>Added by:</strong> <em><%= @drink.user.name %></em></p>
+        <img class="card-img float-center img-fluid-sm" alt="..." src=<%= @drink.image_url %> >
+        <p class="blockquote"><%= @drink.description %></p>
+        <p class="card-text">
+            <strong>Ingredients: </strong>
+            <ul class="list-unstyled">
+            <% @drink.drink_ingredients.each do |drink_ingredient| %>
+                <li>
+                    <%= drink_ingredient.ingredient.emoji %> <%= drink_ingredient.measurement %> of <%= drink_ingredient.ingredient.name %>
+                </li>
+            <% end %>
+            </ul>
+        </p>
+        <p>
+            <%= link_to 'Edit', edit_drink_path(@drink), :class => "btn-primary btn-sm" %>
+            <%= link_to "Delete", drink_path(@drink), :class => "btn-danger btn-sm", method: :delete %>
+        </p>
+    </div>
+</div>
+

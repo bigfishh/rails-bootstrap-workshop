@@ -96,3 +96,18 @@ Step 2:
             * you can redefine these colors
     * Images: 
         * mx-auto: centers the image in a block
+* Button
+    * `btn-color`
+        * color: `primary`, `secondary`, `success`, `warning`, etc.
+    * `btn-size`
+        * size: `sm` or `lg`
+    * can be added inside of erb tags by added a class of `:class => "btn-warning btn-lg"`
+* Card
+    * needs a card container 
+    * needs a card body inside of the container
+        * has card contents: card-text, card-title, etc. 
+* Form 
+    * Each individual label and input box needs to be surrounded by: `<div class="form-group">`
+    * Each input field needs a class of form-control: `:class => "form-control"`
+    * Buttons inside of f.submit can be styled using bootstrap if you include: `:class => "form-control"`
+    
