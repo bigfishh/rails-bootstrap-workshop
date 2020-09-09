@@ -1,10 +1,15 @@
-<h1>GET YOUR DRINKS</h1>
-
-<% @drinks.each do |drink| %>
-    <h3>
-        <%= drink.name %>
-    </h3>
-    <%= image_tag(drink.image_url) %> <br/>
-    <em><%= drink.user.name %></em>
-    <%= link_to "view more", drink_path(drink) %>
-<% end %>
+<div class="row">
+    <% @drinks.each do |drink| %>
+        <div class="col-sm">
+            <div class="card mb-xl-3" style="width: 18rem;">
+                <img src=<%= drink.image_url %> class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%= drink.name %></h5>
+                    <p class="card-subtitle sm"><em><%= drink.user.name %></em></p>
+                    <p class="card-text"><%= drink.description %></p>
+                    <%= link_to "view more", drink_path(drink), :class => "btn btn-primary btn-sm"%>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
