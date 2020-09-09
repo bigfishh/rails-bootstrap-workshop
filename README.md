@@ -1,5 +1,5 @@
 # Rails Bootstrap Workshop
-* [Bootstrap Docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [Bootstrap Documentations](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 ## What is Bootstrap?
 * Bootstrap is a CSS framework.
@@ -26,7 +26,7 @@ Step 2:
 * After saving your files and refreshing your browser, you should already notice some changes in your website.This is because Bootstrap overwrites default browser styles. `browser style > bootstrap style > custom css`
     * You can add customization in bootstrap by using `<style>` tags or adding a CSS file. 
 
-### Basics of Bootstrap
+## Basics of Bootstrap
 * Layout
     * Container
         * Adds 15px padding to around your container if you don't use rows and columns. 
