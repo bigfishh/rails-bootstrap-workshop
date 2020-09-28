@@ -40,7 +40,7 @@ Step 2:
         * number: `1-12` - 12 possible columns in a row
     * Margin + Padding
         * `property_side-breakpoint` or `property-size`
-        * property: `m` for margin or `p` for padding
+        * property_side: `m` for margin or `p` for padding
         * side: `t`, `r`, `b`, `l`, `x`(for right + left), or `y`(for top + bottom)
         * breakpoint: `sm`, `md`, `lg`, or `xl`
         * size: `0 - 5` or `auto`
